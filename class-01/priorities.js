@@ -36,8 +36,10 @@ function promptForHigherPriority() {
 
 function makeHigherPriority(name) {
   var priority = priorities.find(p => p.name === name)
+  if (priority.level > 1){
+ 
   priority.level = priority.level - 1
-  promptForWhatToDo()
+  promptForWhatToDo()}
 }
 
 function promptForLowerPriority() {
